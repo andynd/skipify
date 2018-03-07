@@ -1,0 +1,4 @@
+api_id = ''
+api_secret = ''
+api_user = ''
+blocklist = ['Böhse Onkelz']
