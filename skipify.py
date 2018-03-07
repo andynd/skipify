@@ -7,7 +7,7 @@ import time
 import spotipy
 import spotipy.util as util
 
-import config
+from config import *
 
 token = util.prompt_for_user_token(api_user, scope='user-read-currently-playing user-read-playback-state user-modify-playback-state', client_id=api_id, client_secret=api_secret, redirect_uri='https://localhost/asd' )
 
