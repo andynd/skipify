@@ -17,7 +17,7 @@ while True:
 			sp = spotipy.Spotify(auth=token)
 			while True:
 				playing = sp.currently_playing()
-				if not playing.get('is_playing'):
+				if not playing or not playing.get('is_playing'):
 					time.sleep(30)
 					continue
 				song = playing.get('item',{})
@@ -32,4 +32,5 @@ while True:
 			print("Can't get token for", api_user)
 			exit(1)
 	except spotipy.client.SpotifyException:
+		time.sleep(5)
 		pass
