@@ -1,5 +1,5 @@
 # skipify
-Always skip a list of artists in spotify if they end up beeing played
+Always skip a list of artists in spotify if they end up being played
 
 ## how to run
 * create spotify app, see https://developer.spotify.com/my-applications/
