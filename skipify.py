@@ -22,12 +22,17 @@ while True:
 					continue
 				song = playing.get('item',{})
 				artists = song.get('artists',[])
+				skipped = False
 				for artist in artists:
 					if artist.get('name') in blocklist.get('artist.name', []):
 						print('"{}" matched block list, skipping "{}"'.format(artist.get('name'), song.get('name')))
 						sp.next_track()
+						skipped = True
 						break
-				time.sleep(7)
+				if skipped:
+					time.sleep(1)
+				else:
+					time.sleep(7)
 		else:
 			print("Can't get token for", api_user)
 			exit(1)
